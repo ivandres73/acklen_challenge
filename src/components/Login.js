@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 
-class Navigation extends Component {
+class Login extends Component {
     render() {
         return(
             <form className="form-signing">
-                <input id="username" class="form-control" placeholder="username" required="" autofocus=""></input>
+                <input id="email" className="form-control" placeholder="Email" required="" autoFocus=""></input>
 
             </form>
         )
     }
 }
 
-export default Navigation;
+export default Login;
