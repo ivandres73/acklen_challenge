@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 
-//Routing
-
 class Login extends Component {
     render() {
         return(
