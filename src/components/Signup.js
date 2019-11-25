@@ -4,12 +4,18 @@ class Signup extends Component {
     constructor() {
         super();
         this.state = {
-
-        }
+            username: '',
+            password: ''
+        };
+        this.handleInput = this.handleInput.bind(this);
     }
 
     handleInput(e) {
-        console.log(e.target.name, e.target.value);
+        const { value, name } = e.target;
+        this.setState({
+            [name]: value
+        });
+        console.log(this.state);
     }
 
     render() {
