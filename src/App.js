@@ -7,6 +7,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Signup from './components/Signup';
 
 function App() {
+  console.log('hola soy ivan');
   return (
     <div className="App">
       <BrowserRouter>
