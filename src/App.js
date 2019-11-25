@@ -7,7 +7,6 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Signup from './components/Signup';
 
 function App() {
-  console.log(process.env.REACT_APP_PG_HOST);
   return (
     <div className="App">
       <BrowserRouter>
