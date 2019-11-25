@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class Login extends Component {
     render() {
         return(
-            <div id="login-comp">
+            <div>
                 <form className="form-signing">
                     <input id="email" className="form-control" placeholder="Email" required="" autoFocus=""></input>
                     <input type="password" id="inputPassword" className="form-control" placeholder="Password" required=""></input>
