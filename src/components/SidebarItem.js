@@ -5,27 +5,27 @@ import './css/SidebarItem.css'
 
 class SidebarItem extends Component {
     constructor(props) {
-        super();
+        super(props);
 
-        this.handleClick = this.handleClick.bind(this);
+        this.changeUrl = this.changeUrl.bind(this);
     }
 
-    handleClick() {
-        console.log('clic');
+    changeUrl() {
+        this.props.onChangeHead('link cambiado');
     }
 
     render() {
         return(
             <div className="container">
                 <div className="row">
-                    <div className="clickable col text-white my-auto" onClick={this.handleClick}>
-                        <img src={ArrowLeft}></img>
+                    <div className="clickable col text-white my-auto" onClick={this.changeUrl}>
+                        <img src={ArrowLeft}/>
                     </div>
                     <div className="col">
                         <div className="list-group-item list-group-item-action bg-dark text-white">{this.props.title}</div>
                     </div>
-                    <div className="clickable col text-white my-auto" onClick={this.handleClick}>
-                        <img src={ArrowRight}></img>
+                    <div className="clickable col text-white my-auto" onClick={this.changeUrl}>
+                        <img src={ArrowRight}/>
                     </div>
                 </div>
             </div>
