@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 
 import Navbar from './Navbar';
 import Sidebar from './Sidebar';
-import './characterPage.css';
 
 class CharacterPage extends Component {
     render() {
@@ -19,14 +18,16 @@ class CharacterPage extends Component {
                             <Sidebar/>
                         </div>
                         <div className="col-md-10 p-0" style={{backgroundColor:'black'}}>
-                            <div className="row" style={{backgroundColor:'red'}}>
-                                1
-                            </div>
-                            <div className="row" style={{backgroundColor:'green'}}>
-                                2
-                            </div>
-                            <div className="row" style={{backgroundColor:'blue'}}>
-                                3
+                            <div className="container">
+                                <div className="row" style={{backgroundColor:'red'}}>
+                                    1
+                                </div>
+                                <div className="row" style={{backgroundColor:'green'}}>
+                                    2
+                                </div>
+                                <div className="row" style={{backgroundColor:'blue'}}>
+                                    3
+                                </div>
                             </div>
                         </div>
                     </div>

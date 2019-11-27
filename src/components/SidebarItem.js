@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import ArrowRight from './arrow-right.png';
+import ArrowRight from './assets/arrow-right.png';
+import ArrowLeft from './assets/arrow-left.png';
+import './css/SidebarItem.css'
 
 class SidebarItem extends Component {
     constructor(props) {
@@ -16,13 +18,13 @@ class SidebarItem extends Component {
         return(
             <div className="container">
                 <div className="row">
-                    <div className="col text-white" onClick={this.handleClick}>
-                        Flecha
+                    <div className="clickable col text-white my-auto" onClick={this.handleClick}>
+                        <img src={ArrowLeft}></img>
                     </div>
                     <div className="col">
-                    <div className="list-group-item list-group-item-action bg-dark text-white">{this.props.title}</div>
+                        <div className="list-group-item list-group-item-action bg-dark text-white">{this.props.title}</div>
                     </div>
-                    <div className="col text-white" onClick={this.handleClick}>
+                    <div className="clickable col text-white my-auto" onClick={this.handleClick}>
                         <img src={ArrowRight}></img>
                     </div>
                 </div>

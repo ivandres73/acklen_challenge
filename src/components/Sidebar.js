@@ -7,12 +7,11 @@ class Sidebar extends Component {
             <div className="bg-dark border-right text-white">
                 <div className="sidebar-heading p-2">Change Character </div>
                 <div className="list-group list-group-flush">
-                    <a href="#" className="list-group-item list-group-item-action bg-dark text-white">Element</a>
-                    <a href="#" className="list-group-item list-group-item-action bg-dark text-white">Head</a>
-                    <a href="#" className="list-group-item list-group-item-action bg-dark text-white">Body</a>
-                    <a href="#" className="list-group-item list-group-item-action bg-dark text-white">Arms</a>
-                    <a href="#" className="list-group-item list-group-item-action bg-dark text-white">Legs</a>
-                    <SidebarItem title="hola"/>
+                    <SidebarItem title="Element"/>
+                    <SidebarItem title="Head"/>
+                    <SidebarItem title="Body"/>
+                    <SidebarItem title="Arms"/>
+                    <SidebarItem title="Legs"/>
                 </div>
             </div>
         )
