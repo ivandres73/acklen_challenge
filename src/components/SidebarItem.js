@@ -12,10 +12,18 @@ class SidebarItem extends Component {
     }
 
     onChangeNext() {
+        if (this.props.name == "error") {
+            alert('not yet implemented');
+            return;
+        }
         this.props.onChangeNext(this.props.name);
     }
 
     onChangeBack() {
+        if (this.props.name == "error") {
+            alert('not yet implemented');
+            return;
+        }
         this.props.onChangeBack(this.props.name);
     }
 

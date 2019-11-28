@@ -65,19 +65,19 @@ class CharacterPage extends Component {
                                 onChangeBack={this.onChangeBack}
                             />
                         </div>
-                        <div className="col-md-10 p-0" style={{backgroundColor:'black'}}>
+                        <div className="col-md-10 p-0" style={{backgroundColor:'white'}}>
                             <div className="container">
-                                <div className="row justify-content-center" style={{backgroundColor:'red'}}>
+                                <div className="row justify-content-center">
                                     <BodyPart
                                         Url={this.state.head}
                                     />
                                 </div>
-                                <div className="row justify-content-center" style={{backgroundColor:'green'}}>
+                                <div className="row justify-content-center">
                                     <BodyPart
                                         Url={this.state.body}
                                     />
                                 </div>
-                                <div className="row justify-content-center" style={{backgroundColor:'blue'}}>
+                                <div className="row justify-content-center">
                                     <BodyPart
                                         Url={this.state.legs}
                                     />

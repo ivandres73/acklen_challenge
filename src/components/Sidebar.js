@@ -22,7 +22,12 @@ class Sidebar extends Component {
             <div className="bg-dark border-right text-white">
                 <div className="sidebar-heading p-2">Change Character </div>
                 <div className="list-group list-group-flush">
-                    <SidebarItem title="Element"/>
+                    <SidebarItem
+                        title="Element"
+                        name="error"
+                        onChangeNext={this.onChangeNext}
+                        onChangeBack={this.onChangeBack}
+                    />
                     <SidebarItem
                         title="Head"
                         name="head"
@@ -37,6 +42,9 @@ class Sidebar extends Component {
                     />
                     <SidebarItem
                         title="Arms"
+                        name="error"
+                        onChangeNext={this.onChangeNext}
+                        onChangeBack={this.onChangeBack}
                     />
                     <SidebarItem
                         title="Legs"

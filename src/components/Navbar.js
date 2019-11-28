@@ -8,7 +8,7 @@ class Navbar extends Component {
                     <span className="navbar-text text-white">
                         User
                     </span>
-                    <a href="#" className="text-white">
+                    <a href="/login" className="text-white">
                         Log out
                     </a>
                 </nav>
