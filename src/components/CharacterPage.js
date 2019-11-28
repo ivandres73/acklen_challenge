@@ -40,7 +40,7 @@ class CharacterPage extends Component {
 
     onChangeBack(bodyPart) {
         //axios.get('http://localhost/'+bodyPart+'/back')
-        axios.get('http://3.8.224.1/'+bodyPart+'/back')
+        axios.get('http://3.88.224.1/'+bodyPart+'/back')
         .then(response => {
             console.log(response.data)
             this.setState({
