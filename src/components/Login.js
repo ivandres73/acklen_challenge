@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import { Redirect } from 'react-router';
+import Logo from './assets/logo.png';
 
 class Login extends Component {
     constructor(props) {
@@ -47,6 +48,7 @@ class Login extends Component {
 
         return(
             <div>
+                <img src={Logo}/>
                 <form className="form-signing">
                     <input
                         name="username"

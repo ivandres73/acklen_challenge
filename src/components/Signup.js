@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Logo from './assets/logo.png';
 
 class Signup extends Component {
     constructor() {
@@ -21,6 +22,7 @@ class Signup extends Component {
     render() {
         return(
             <div>
+                <img src={Logo}/>
                 <form className="form-signing">
                     <input
                         name="username"
@@ -44,6 +46,9 @@ class Signup extends Component {
                     />
                 </form>
                 <button className="btn btn-lg btn-primary btn-block" type="submit">Sign up</button>
+                <p>
+                    Already have an account? <a href="/login">Log in</a>
+                </p>
             </div>
         )
     }
