@@ -20,7 +20,7 @@ class Signup extends Component {
             return;
         }
 
-        axios.post('http://3.88.224.1/login/', this.state)
+        axios.post('http://3.88.224.1/user/', this.state)
         //axios.post('http://localhost/user/', this.state)
         .then(response => {
             if (response.data.message == 'user already exist')
