@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import { Redirect } from 'react-router';
 
 class Login extends Component {
     constructor(props) {
@@ -7,7 +8,8 @@ class Login extends Component {
 
         this.state = {
             username: '',
-            password: ''
+            password: '',
+            toHome: false
         }
         this.handleInput = this.handleInput.bind(this);
         this.handleLogin = this.handleLogin.bind(this);
@@ -22,7 +24,7 @@ class Login extends Component {
             if (response.data.message == 'invalid password')
                 alert('Incorrect password');
             else if (response.data.username != null)
-                alert('Loggin Success');
+                this.setState({ toHome: true})
             else
                 alert('User doesnt exist');
         }).catch(error => {
@@ -38,7 +40,11 @@ class Login extends Component {
         console.log('users: ', this.state.username);
     }
 
-    render() {        
+    render() {
+        if (this.state.toHome === true) {
+            return <Redirect to='/home'/>
+        }
+
         return(
             <div>
                 <form className="form-signing">
