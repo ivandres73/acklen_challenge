@@ -6,7 +6,7 @@ class Navbar extends Component {
             <div>
                 <nav className="navbar navbar-dark bg-dark">
                     <span className="navbar-text text-white">
-                        User
+                        Home
                     </span>
                     <a href="/login" className="text-white">
                         Log out
