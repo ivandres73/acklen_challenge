@@ -16,7 +16,7 @@ class Login extends Component {
     handleLogin() {
         console.log('state', this.state);
         //axios.post('http://3.88.224.1/login/', this.state)
-        axios.post('http://localhostlogin/', this.state)
+        axios.post('http://localhost/login/', this.state)
         .then(response => {
             console.log('response: ', response.data)
             if (response.data.message == 'invalid password')
