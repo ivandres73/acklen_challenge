@@ -7,29 +7,29 @@ class SidebarItem extends Component {
     constructor(props) {
         super(props);
 
-        this.onChangeHeadNext = this.onChangeHeadNext.bind(this);
-        this.onChangeHeadBack = this.onChangeHeadBack.bind(this);
+        this.onChangeNext = this.onChangeNext.bind(this);
+        this.onChangeBack = this.onChangeBack.bind(this);
     }
 
-    onChangeHeadNext() {
-        this.props.onChangeHeadNext();
+    onChangeNext() {
+        this.props.onChangeNext(this.props.name);
     }
 
-    onChangeHeadBack() {
-        this.props.onChangeHeadBack();
+    onChangeBack() {
+        this.props.onChangeBack();
     }
 
     render() {
         return(
             <div className="container">
                 <div className="row">
-                    <div className="clickable col text-white my-auto" onClick={this.onChangeHeadBack}>
+                    <div className="clickable col text-white my-auto" onClick={this.onChangeBack}>
                         <img src={ArrowLeft}/>
                     </div>
                     <div className="col">
                         <div className="list-group-item list-group-item-action bg-dark text-white">{this.props.title}</div>
                     </div>
-                    <div className="clickable col text-white my-auto" onClick={this.onChangeHeadNext}>
+                    <div className="clickable col text-white my-auto" onClick={this.onChangeNext}>
                         <img src={ArrowRight}/>
                     </div>
                 </div>

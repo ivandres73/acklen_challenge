@@ -25,8 +25,9 @@ class CharacterPage extends Component {
         this.onChangeHeadBack = this.onChangeHeadBack.bind(this);
     }
 
-    onChangeHeadNext() {
-        axios.get('http://localhost/head/next')
+    onChangeHeadNext(bodyPart) {
+        console.log('http://localhost/'+bodyPart+'/next');
+        axios.get('http://localhost/'+bodyPart+'/next')
         .then(response => {
             console.log(response.data)
             this.setState({
@@ -37,8 +38,8 @@ class CharacterPage extends Component {
         })
     }
 
-    onChangeHeadBack() {
-        axios.get('http://localhost/head/back')
+    onChangeHeadBack(bodyPart) {
+        axios.get('http://localhost/'+bodyPart+'back')
         .then(response => {
             console.log(response.data)
             this.setState({

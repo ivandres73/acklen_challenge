@@ -5,16 +5,16 @@ class Sidebar extends Component {
     constructor(props) {
         super(props);
 
-        this.onChangeHeadNext = this.onChangeHeadNext.bind(this);
-        this.onChangeHeadBack = this.onChangeHeadBack.bind(this);
+        this.onChangedNext = this.onChangeNext.bind(this);
+        this.onChangeBack = this.onChangeBack.bind(this);
     }
 
-    onChangeHeadNext() {
-        this.props.onChangeHeadNext();
+    onChangeNext(bodyPart) {
+        this.props.onChangeNext(bodyPart);
     }
 
-    onChangeHeadBack() {
-        this.props.onChangeHeadBack();
+    onChangeBack(bodyPart) {
+        this.props.onChangeBack(bodyPart);
     }
 
     render() {
@@ -25,8 +25,9 @@ class Sidebar extends Component {
                     <SidebarItem title="Element"/>
                     <SidebarItem
                         title="Head"
-                        onChangeHeadNext={this.onChangeHeadNext}
-                        onChangeHeadBack={this.onChangeHeadBack}
+                        name="head"
+                        onChangeNext={this.onChangeNext}
+                        onChangeBack={this.onChangeBack}
                     />
                     <SidebarItem
                         title="Body"
