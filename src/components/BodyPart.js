@@ -8,7 +8,7 @@ class BodyPart extends Component {
     render() {
         return(
             <div>
-                <img src={this.props.Url}/>
+                <img src={this.props.Url} alt="body part"/>
             </div>
         )
     }

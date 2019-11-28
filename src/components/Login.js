@@ -48,7 +48,7 @@ class Login extends Component {
 
         return(
             <div>
-                <img src={Logo}/>
+                <img src={Logo} alt="logo"/>
                 <form className="form-signing">
                     <input
                         name="username"

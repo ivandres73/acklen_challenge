@@ -32,13 +32,13 @@ class SidebarItem extends Component {
             <div className="container">
                 <div className="row">
                     <div className="clickable col text-white my-auto" onClick={this.onChangeBack}>
-                        <img src={ArrowLeft}/>
+                        <img src={ArrowLeft} alt="left arrow"/>
                     </div>
                     <div className="col">
                         <div className="list-group-item list-group-item-action bg-dark text-white">{this.props.title}</div>
                     </div>
                     <div className="clickable col text-white my-auto" onClick={this.onChangeNext}>
-                        <img src={ArrowRight}/>
+                        <img src={ArrowRight} alt="left arrow"/>
                     </div>
                 </div>
             </div>

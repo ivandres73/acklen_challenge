@@ -15,7 +15,7 @@ class Signup extends Component {
     }
 
     handleCreateUser() {
-        if (this.state.password != this.state.password_confirm) {
+        if (this.state.password !== this.state.password_confirm) {
             alert('Passwords dont match!');
             return;
         }
@@ -23,9 +23,10 @@ class Signup extends Component {
         axios.post('http://3.88.224.1/login/', this.state)
         //axios.post('http://localhost/user/', this.state)
         .then(response => {
-            console.log('response: ', response.data)
             if (response.data.message == 'user already exist')
                 alert('user already exist');
+            else if (response.data.message == 'invalid password')
+                alert('try another user');
             else
                 alert('User created Succesfully!');
         }).catch(error => {
@@ -44,7 +45,7 @@ class Signup extends Component {
     render() {
         return(
             <div>
-                <img src={Logo}/>
+                <img src={Logo} alt="logo"/>
                 <form className="form-signing">
                     <input
                         name="username"
