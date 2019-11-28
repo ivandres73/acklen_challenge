@@ -26,7 +26,8 @@ class CharacterPage extends Component {
     }
 
     onChangeNext(bodyPart) {
-        axios.get('http://localhost/'+bodyPart+'/next')
+        //axios.get('http://localhost/'+bodyPart+'/next')
+        axios.get('http://33.88.224.1/'+bodyPart+'/next')
         .then(response => {
             console.log(response.data)
             this.setState({
@@ -38,7 +39,8 @@ class CharacterPage extends Component {
     }
 
     onChangeBack(bodyPart) {
-        axios.get('http://localhost/'+bodyPart+'/back')
+        //axios.get('http://localhost/'+bodyPart+'/back')
+        axios.get('http://33.8.224.1/'+bodyPart+'/back')
         .then(response => {
             console.log(response.data)
             this.setState({
