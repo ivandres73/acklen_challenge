@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Logo from './assets/logo.png';
 import axios from 'axios';
+import { Redirect } from 'react-router';
 
 class Signup extends Component {
     constructor() {
@@ -9,6 +10,7 @@ class Signup extends Component {
             username: '',
             password: '',
             password_confirm: '',
+            toLogin: false
         };
         this.handleInput = this.handleInput.bind(this);
         this.handleCreateUser = this.handleCreateUser.bind(this);
@@ -27,8 +29,10 @@ class Signup extends Component {
                 alert('user already exist');
             else if (response.data.message == 'invalid password')
                 alert('try another user');
-            else
+            else {
                 alert('User created Succesfully!');
+                this.setState({ toLogin: true });
+            }
         }).catch(error => {
             console.error(error)
         })
@@ -43,16 +47,22 @@ class Signup extends Component {
     }
 
     render() {
+        if (this.state.toLogin === true) {
+            return <Redirect to='/'/>
+        }
+
         return(
             <div>
                 <img src={Logo} alt="logo"/>
                 <form className="form-signing">
+                    <div style={{height: '15px'}}/>
                     <input
                         name="username"
                         className="form-control"
                         placeholder="username"
                         onChange={this.handleInput}
                     />
+                    <div style={{height: '15px'}}/>
                     <input
                         type="password"
                         name="password"
@@ -60,6 +70,7 @@ class Signup extends Component {
                         placeholder="Password"
                         onChange={this.handleInput}
                     />
+                    <div style={{height: '15px'}}/>
                     <input
                         type="password"
                         name="password_confirm"
@@ -68,6 +79,7 @@ class Signup extends Component {
                         onChange={this.handleInput}
                     />
                 </form>
+                <div style={{height: '15px'}}/>
                 <button className="btn btn-lg btn-primary btn-block" type="submit" onClick={this.handleCreateUser}>Sign up</button>
                 <p>
                     Already have an account? <a href="/login">Log in</a>

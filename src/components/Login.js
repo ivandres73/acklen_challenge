@@ -57,6 +57,7 @@ class Login extends Component {
                         autoFocus=""
                         onChange={this.handleInput}
                     />
+                    <div style={{height: '15px'}}/>
                     <input
                         type="password"
                         name="password"
@@ -65,6 +66,7 @@ class Login extends Component {
                         onChange={this.handleInput}
                     />
                 </form>
+                <div style={{height: '15px'}}/>
                 <button className="btn btn-lg btn-primary btn-block" type="submit" onClick={this.handleLogin}>Log in</button>
                 <p>
                     Don't have an account? <a href="/signup">Sign up</a>
