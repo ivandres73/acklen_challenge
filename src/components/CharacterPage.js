@@ -15,35 +15,34 @@ class CharacterPage extends Component {
         super();
 
         this.state = {
-            current_head: DefHead,
-            current_body: DefBody,
-            current_legs: DefLegs,
-            current_arms: ''
+            head: DefHead,
+            body: DefBody,
+            legs: DefLegs,
+            arms: ''
         }
 
-        this.onChangeHeadNext = this.onChangeHeadNext.bind(this);
-        this.onChangeHeadBack = this.onChangeHeadBack.bind(this);
+        this.onChangeNext = this.onChangeNext.bind(this);
+        this.onChangeBack = this.onChangeBack.bind(this);
     }
 
-    onChangeHeadNext(bodyPart) {
-        console.log('http://localhost/'+bodyPart+'/next');
+    onChangeNext(bodyPart) {
         axios.get('http://localhost/'+bodyPart+'/next')
         .then(response => {
             console.log(response.data)
             this.setState({
-                current_head: response.data
+                [bodyPart]: response.data
             })
         }).catch(error => {
             console.error(error)
         })
     }
 
-    onChangeHeadBack(bodyPart) {
-        axios.get('http://localhost/'+bodyPart+'back')
+    onChangeBack(bodyPart) {
+        axios.get('http://localhost/'+bodyPart+'/back')
         .then(response => {
             console.log(response.data)
             this.setState({
-                current_head: response.data
+                [bodyPart]: response.data
             })
         }).catch(error => {
             console.error(error)
@@ -62,25 +61,25 @@ class CharacterPage extends Component {
                     <div className="row full-row">
                         <div className="col-md-2 p-0">
                             <Sidebar
-                                onChangeHeadNext={this.onChangeHeadNext}
-                                onChangeHeadBack={this.onChangeHeadBack}
+                                onChangeNext={this.onChangeNext}
+                                onChangeBack={this.onChangeBack}
                             />
                         </div>
                         <div className="col-md-10 p-0" style={{backgroundColor:'black'}}>
                             <div className="container">
                                 <div className="row justify-content-center" style={{backgroundColor:'red'}}>
                                     <BodyPart
-                                        Url={this.state.current_head}
+                                        Url={this.state.head}
                                     />
                                 </div>
                                 <div className="row justify-content-center" style={{backgroundColor:'green'}}>
                                     <BodyPart
-                                        Url={this.state.current_body}
+                                        Url={this.state.body}
                                     />
                                 </div>
                                 <div className="row justify-content-center" style={{backgroundColor:'blue'}}>
                                     <BodyPart
-                                        Url={this.state.current_legs}
+                                        Url={this.state.legs}
                                     />
                                 </div>
                             </div>

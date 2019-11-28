@@ -16,7 +16,7 @@ class SidebarItem extends Component {
     }
 
     onChangeBack() {
-        this.props.onChangeBack();
+        this.props.onChangeBack(this.props.name);
     }
 
     render() {

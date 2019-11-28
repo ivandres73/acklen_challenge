@@ -5,7 +5,7 @@ class Sidebar extends Component {
     constructor(props) {
         super(props);
 
-        this.onChangedNext = this.onChangeNext.bind(this);
+        this.onChangeNext = this.onChangeNext.bind(this);
         this.onChangeBack = this.onChangeBack.bind(this);
     }
 
@@ -31,12 +31,18 @@ class Sidebar extends Component {
                     />
                     <SidebarItem
                         title="Body"
+                        name="body"
+                        onChangeNext={this.onChangeNext}
+                        onChangeBack={this.onChangeBack}
                     />
                     <SidebarItem
                         title="Arms"
                     />
                     <SidebarItem
                         title="Legs"
+                        name="legs"
+                        onChangeNext={this.onChangeNext}
+                        onChangeBack={this.onChangeBack}
                     />
                 </div>
             </div>
